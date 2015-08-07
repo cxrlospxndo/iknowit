@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  </head>
+  <body>
+    <style type="text/css">
+    #star-six {
+      width: 0;
+      height: 0;
+      /*border-left: 50px solid transparent;
+      border-right: 50px solid transparent;*/
+      border-bottom: 100px solid red;
+      position: relative;
+    }
+    /*#star-six:after {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid red;
+      position: absolute;
+      content: "";
+      top: 30px;
+      left: -50px;
+    }*/
+    #messagesDiv {
+      top: 5%;
+      left: 5%;
+      width: 30%;
+    }
+    </style>
+    <div id='messagesDiv'></div>
+    <input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'>
+
+    <div id="star-six"></div>
+    <script>
+      var myDataRef = new Firebase('https://luminous-inferno-9666.firebaseio.com/');
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val(),
+              text = $('#messageInput').val();
+          myDataRef.push({name: name, text: text});
+          $('#messageInput').val('');
+        }
+      });
+
+      myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val(),
+            key = snapshot.key();
+        displayChatMessage(message.name, message.text, key);
+      });
+
+      myDataRef.on('child_removed', function(snapshot){
+        var key = snapshot.key();
+        console.log(key);
+        $("#" + key).remove();
+      });
+
+      function displayChatMessage(name, text, key) {
+        var content = $('<div/>').html(text).prepend($('<em/>').text(name+': '))
+        
+        $("<div id ="+key+"><div/>").html(content).appendTo($('#messagesDiv'));
+        
+        
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+    </script>
+
+<!--     <p style="text-align: center">
+      <img src="http://procatinator.com/images/tumblr_lkkfw2IWzp1qadw96o1_500.gif" style="position: relative">
+    </p> -->
+    <script>
+      // var cat = document.querySelector("img");
+      // var angle = 0, lastTime = null, a = 6, b = 20;
+      // function animate(time) {
+      //   if (lastTime != null)
+      //     angle += (time - lastTime) * 0.001;
+      //   lastTime = time;
+      //   cat.style.top = (Math.sin(angle) * a) + "px";
+      //   cat.style.left = (Math.cos(angle) * b) + "px";
+      //   requestAnimationFrame(animate);
+      //   a--;
+      //   b--;
+      // }
+      // requestAnimationFrame(animate);
+    </script>
+  </body>
+</html>

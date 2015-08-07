@@ -1,47 +1,51 @@
 ﻿<div class="form-inline">
-    <div class="form-group">
-        <span>Title:</span>
-        <input class="form-control" id="title" type="text" placeholder="Title"/>
-    </div>
     <div class="form-group pull-right" style="margin-bottom:2px;">
-        <select class="form-control" name="">
-            <option value="question">Question</option>
-            <option value="article">Article</option>
-            <option value="note">Note</option>
-        </select>
+        
     </div>
     <div>
-        <div></div>
-        <div class="panel pull-right">
-            <div class="panel-heading">
-                <span>Tags</span>
-            </div>
-            <div class="panel-body">
-                <input class="form-control" id="tag" type="text" placeholder="Tag name"/>
-                <input type="button" class="btn btn-dark" value="Add">
-                <div id="tagList">
-
-                </div>
-            </div>
-            <!-- Create the toolbar container -->
-            <div id="toolbar">
-                <button class="ql-bold">Bold</button>
-                <button class="ql-italic">Italic</button>
-            </div>
-
-            <!-- Create the editor container -->
-            <div id="editor">
-                <div>Hello World!</div>
-            </div>
-
-          
-
-            <!-- Initialize Quill editor -->
-            <script>
-                var editor = new Quill('#editor');
-                editor.addModule('toolbar', { container: '#toolbar' });
-            </script>
+        <div class="col-lg-8">
+            <div class="well-sm pull-left">
+                <input class="form-control" id="title" type="text" placeholder="Title" />
+            </div>                
         </div>
-       
+        <div class="col-lg-4">
+            <div class="well-sm pull-right">
+                <select class="form-control " name="">
+                    <option value="question">Question</option>
+                    <option value="article">Article</option>
+                    <option value="note">Note</option>
+                </select>
+            </div>            
+            <div class="panel pull-right">
+                <div class="panel-heading" style="background-color: rgba(128,128,128,0.1);">
+                    <span>Tags</span>
+                </div>
+                <div class="panel-body">
+                    <input class="form-control" id="tag" type="text" placeholder="Tag name" />
+                    <input type="button" class="btn btn-dark" value="Add">
+                    <div id="tagList">
+
+                    </div>
+                </div>
+                <!-- Create the toolbar container -->
+                <div id="toolbar">
+                    <button class="ql-bold">Bold</button>
+                    <button class="ql-italic">Italic</button>
+                </div>
+
+                <!-- Create the editor container -->
+                <div id="editor">
+                    <div>Hello World!</div>
+                </div>
+
+
+
+                <!-- Initialize Quill editor -->
+                <script>
+                    var editor = new Quill('#editor');
+                    editor.addModule('toolbar', { container: '#toolbar' });
+                </script>
+            </div>
+        </div>
     </div>
 </div>

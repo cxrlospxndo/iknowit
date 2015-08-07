@@ -59,6 +59,8 @@
   <ItemGroup>
     <Content Include="app.js" />
     <Content Include="controllers\mainController.js" />
+    <Content Include="Controls\AddPost\addPostDirective.js" />
+    <Content Include="Controls\AddPost\addPostTemplate.html" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />

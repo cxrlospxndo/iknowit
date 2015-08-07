@@ -69,9 +69,11 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
+    <Content Include="js\angular-sanitize.js" />
     <Content Include="js\angular.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\textangular.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -8,16 +8,48 @@
 <body ng-app="app">
     <div ng-controller="mainController">
 
-        <content-panel ng-hide="true"></content-panel>
-        <add-post></add-post>
+        <div class="container well">
+            <div class="row well-sm">
+                <label class="pull-left">
+                    <i class="glyphicon glyphicon-picture"></i>
+                    <span ng-bind="title"></span>
+                </label>
+                <input class="pull-right btn btn-default" type="button" value="Add New Post" ng-click="showPage('addNewPost')" />
+            </div>
+            <div class="row well-lg" style="background:white;">
+                <div class="well-sm pull-right" style="position:relative;">
+                    <input type="text" class="form-control" placeholder="Search" />
+                    <i class="glyphicon glyphicon-search" style="position:absolute; top:20px; right: 20px;"></i>
+                </div>                
+                <div style="display : table; width: 100%;">
+                    <div style="display: table-row; background-color: rgba(128,128,128,0.1);">
+                        <div style="display: table-cell">Article</div>
+                        <div style="display: table-cell">Type</div>
+                        <div style="display: table-cell">Date</div>
+                    </div>
+                    <div ng-repeat="p in posts" style="display: table-row;">
+                        <div style="display: table-cell">
+                            <a ng-bind="p.title"></a>
+                        </div>
+                        <div ng-class="" style="display: table-cell">
+                            <span ng-bind="p.type"></span>
+                        </div>
+                        <div style="display: table-cell">
+                            <span ng-bind="p.date"></span>
+                        </div>
+                    </div>
+                </div>
+              
+               <add-post></add-post>
+            </div>
+        </div>
     </div>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="app.js"></script>
-    <script src="Controls/AddPost/addPostDirective.js"></script> 
-    <script src="Controls/ContentPanel/contentPanelDirective.js"></script> 
+    <script src="Controls/AddPost/addPostDirective.js"></script>  
     <script src="controllers/mainController.js"></script>
    
 </body>

@@ -2,30 +2,48 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
 </head>
 <body ng-app="app">
-
-    <div>
-
-        <input type="button" value="Add New Post" ng-click="showPage('addNewPost')" />
-        <input type="button" value="Add New Post" ng-click="showPage('addNewPost')" />
-        <input type="button" value="Add New Post" ng-click="showPage('addNewPost')" />
-    </div>
-
     <div ng-controller="mainController">
-        {{message}}
 
-        <div>
-            <div ng-repeat="p in posts">
+        <div class="container well">
+            <div class="row well-sm">
+                <label class="pull-left">
+                    <i class="glyphicon glyphicon-picture"></i>
+                    <span ng-bind="title"></span>
+                </label>
+                <input class="pull-right btn btn-default" type="button" value="Add New Post" ng-click="showPage('addNewPost')" />
+            </div>
+            <div class="row well-lg" style="background:white;">
                 <div>
-                    <span ng-bind="p.title"></span>
+                    <div>Article</div>
+                    <div>Type</div>
+                    <div>Date</div>
+                </div>
+                <div ng-repeat="p in posts">
+                    <div>
+                        <span ng-bind="p.title"></span>
+                    </div>
+                    <div ng-class="">
+                        <span ng-bind="p.type"></span>
+                    </div>
+                    <div>
+                        <span ng-bind="p.date"></span>
 
+                        <div ng-repeat="t in p.tags">
+                            <div>
+                                <span ng-bind="t"></span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
 
-
-
+        
     </div>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/angular.min.js"></script>

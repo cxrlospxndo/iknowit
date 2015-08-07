@@ -17,8 +17,9 @@
                 <input class="pull-right btn btn-default" type="button" value="Add New Post" ng-click="showPage('addNewPost')" />
             </div>
             <div class="row well-lg" style="background:white;">
+
                 <div style="display : table; width: 100%;">
-                    <div style="display: table-row; background-color: rgba(128,128,128,0.1);"> 
+                    <div style="display: table-row; background-color: rgba(128,128,128,0.1);">
                         <div style="display: table-cell">Article</div>
                         <div style="display: table-cell">Type</div>
                         <div style="display: table-cell">Date</div>
@@ -32,18 +33,14 @@
                         </div>
                         <div style="display: table-cell">
                             <span ng-bind="p.date"></span>
-
-        <div>
-            <div ng-repeat="p in posts">
-                                <div>
-                    <span ng-bind="p.title"></span>
-
                         </div>
                     </div>
                 </div>
+            </div>
+            
 
-        <add-post></add-post>
-        
+        </div>
+        <!--<add-post></add-post>-->
     </div>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/angular.min.js"></script>

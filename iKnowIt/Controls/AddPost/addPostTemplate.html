@@ -17,10 +17,10 @@
                 <span>Tags</span>
             </div>
             <div class="panel-body">
-                <input class="form-control" id="tag" type="text" />
-                <input type="button" class="btn btn-dark" value="Add">
-                <div id="tagList">
-
+                <input class="form-control" id="tag" ng-model="newTag" type="text" />
+                <input type="button" class="btn btn-dark" value="Add" ng-click="addTag()">
+                <div id="tagList" ng-repeat="t in tags">
+                    <span>{{t}}</span>
                 </div>
             </div>
             

@@ -17,7 +17,7 @@
                 <input class="pull-right btn btn-default" type="button" value="Add New Post" ng-click="showPage('addNewPost')" />
             </div>
             <div class="row well-lg" style="background:white;">
-                <div class="well-sm pull-right" style="position:relative;">
+                <!--<div class="well-sm pull-right" style="position:relative;">
                     <input type="text" class="form-control" placeholder="Search" />
                     <i class="glyphicon glyphicon-search" style="position:absolute; top:20px; right: 20px;"></i>
                 </div>                
@@ -38,7 +38,7 @@
                             <span ng-bind="p.date"></span>
                         </div>
                     </div>
-                </div>
+                </div>-->
               
                <add-post></add-post>
             </div>
@@ -51,6 +51,6 @@
     <script src="app.js"></script>
     <script src="Controls/AddPost/addPostDirective.js"></script>  
     <script src="controllers/mainController.js"></script>
-   
+    <script src="js/angularfire.min.js"></script>
 </body>
 </html>

@@ -94,4 +94,13 @@
     return {
         firebaseSource: firebaseSource
     }
-});
+
+})
+
+.service('firebaseService', ['$firebase', 'firebaseFactory', function ($firebase, firebaseFactory) {
+    return function (table, limit) {
+        var ref = firebaseFactory.firebaseSource(table);
+        limit && (ref = ref.limit(limit));
+        return $firebase(ref);
+    }
+}]);

@@ -1,1 +1,1 @@
-﻿var app = angular.module('app', ['textAngular']);
+﻿var app = angular.module('app', ['firebase']);

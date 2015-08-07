@@ -6,9 +6,9 @@ app.directive('addPost', [function () {
            
         },
         link: function (scope, element, attributes) {
-          
+            scope.tags = [];
             scope.addTag = function () {
-
+                scope.tags.push(scope.newTag);
             }
 
         }

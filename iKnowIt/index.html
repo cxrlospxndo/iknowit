@@ -17,7 +17,7 @@
             </div>
             <div class="row well-lg" style="background:white;">
                 <content-panel ng-hide="false"></content-panel>              
-                <add-post ng-hide="true"></add-post>
+                <add-post ng-hide="false"></add-post>
                 </div>                
                     </div>
                         </div>
@@ -25,10 +25,12 @@
     <script src="js/angular.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angularfire.min.js"></script>
+    <!-- Include the Quill library -->
+    <script src="http://cdn.quilljs.com/latest/quill.js"></script>
     <script src="app.js"></script>
     <script src="Controls/AddPost/addPostDirective.js"></script>  
     <script src="Controls/ContentPanel/contentPanelDirective.js"></script>
     <script src="controllers/mainController.js"></script>
-    
+   
 </body>
 </html>

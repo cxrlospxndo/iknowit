@@ -59,6 +59,8 @@
   <ItemGroup>
     <Content Include="app.js" />
     <Content Include="controllers\mainController.js" />
+    <Content Include="Controls\AddPost\addPostDirective.js" />
+    <Content Include="Controls\AddPost\addPostTemplate.html" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -68,9 +70,6 @@
     <Content Include="js\angular.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\jquery-2.1.4.min.js" />
-    <Content Include="js\npm.js" />
-    <Content Include="views\main.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

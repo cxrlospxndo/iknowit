@@ -7,7 +7,9 @@ app.directive('addPost', [function () {
         },
         link: function (scope, element, attributes) {
           
-            
+            scope.addTag = function () {
+
+            }
 
         }
     }

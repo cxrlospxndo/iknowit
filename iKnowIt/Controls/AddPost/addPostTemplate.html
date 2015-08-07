@@ -1,9 +1,9 @@
-﻿<div>
+﻿<div class="form-inline">
     <div class="form-group">
         <span>Title:</span>
         <input class="form-control" id="title" type="text" />
     </div>
-    <div class="form-group">
+    <div class="form-group pull-right" style="margin-bottom:2px;">
         <select class="form-control" name="">
             <option value="question">Question</option>
             <option value="article">Article</option>
@@ -12,8 +12,19 @@
     </div>
     <div>
         <div></div>
-        <div class="form-group">
-            <input class="form-control" id="tag" type="text" />
+        <div class="panel pull-right">
+            <div class="panel-heading">
+                <span>Tags</span>
+            </div>
+            <div class="panel-body">
+                <input class="form-control" id="tag" type="text" />
+                <input type="button" class="btn btn-dark" value="Add">
+                <div id="tagList">
+
+                </div>
+            </div>
+            
         </div>
+       
     </div>
 </div>

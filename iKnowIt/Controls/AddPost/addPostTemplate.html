@@ -23,9 +23,25 @@
 
                 </div>
             </div>
-            <div text-angular="text-angular" 
-                 name="htmlcontent" 
-                 ng-model="htmlcontent"></div>
+            <!-- Create the toolbar container -->
+            <div id="toolbar">
+                <button class="ql-bold">Bold</button>
+                <button class="ql-italic">Italic</button>
+            </div>
+
+            <!-- Create the editor container -->
+            <div id="editor">
+                <div>Hello World!</div>
+            </div>
+
+            <!-- Include the Quill library -->
+            <script src="http://cdn.quilljs.com/latest/quill.js"></script>
+
+            <!-- Initialize Quill editor -->
+            <script>
+                var editor = new Quill('#editor');
+                editor.addModule('toolbar', { container: '#toolbar' });
+            </script>
         </div>
        
     </div>

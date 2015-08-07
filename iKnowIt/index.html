@@ -4,8 +4,28 @@
     <title></title>
 </head>
 <body ng-app="app">
+
+    <div>
+
+        <input type="button" value="Add New Post" ng-click="showPage('addNewPost')" />
+        <input type="button" value="Add New Post" ng-click="showPage('addNewPost')" />
+        <input type="button" value="Add New Post" ng-click="showPage('addNewPost')" />
+    </div>
+
     <div ng-controller="mainController">
         {{message}}
+
+        <div>
+            <div ng-repeat="p in posts">
+                <div>
+                    <span ng-bind="p.title"></span>
+
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/angular.min.js"></script>

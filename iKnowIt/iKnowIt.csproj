@@ -58,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.js" />
-    <Content Include="controllers\directives.js" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -88,6 +87,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="controllers\" />
     <Folder Include="views\" />
   </ItemGroup>
   <PropertyGroup>

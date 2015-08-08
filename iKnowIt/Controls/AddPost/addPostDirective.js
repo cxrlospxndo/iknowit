@@ -19,7 +19,9 @@ app.directive('addPost', ['firebaseFactory', function (firebaseFactory) {
                     date: currentDate,
                     tags: scope.tags
                 };
+                scope.newPostMode = false;
                 firebaseFactory.firebaseSource('posts').push(newPost);
+               
             }
         }
     }

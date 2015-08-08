@@ -1,0 +1,29 @@
+﻿<div style="display : table; width: 100%;">
+    <div style="display: table-row;">
+        <div style="display: table-cell">
+            <a ng-bind="p.title"></a>
+        </div>
+        <div>
+            <div style="display: table-row">
+                Status: <span ng-bind="selectedPost.type" style="font-weight: bold;" ng-style="{'color': statusColorEnum[selectedPost.status]}"></span>
+            </div>
+        </div>
+        <div style="display: table-row">
+            Content: <span ng-bind="selectedPost.content"></span>
+        </div>
+        <div style="display: table-row">
+            Date: <span ng-bind="selectedPost.date"></span>
+        </div>
+        <div style="display: table-row">
+            <div ng-repeat="t in selectedPost.tags" class="pull-left" style="margin:1px;">
+                Tags:
+                <span ng-bind="t" style="background-color: rgba(64, 204, 308, 0.4); border: 1px solid grey; padding: 1px 3px; border-radius: 5px;"></span>
+            </div>
+        </div>
+        <div style="display: table-row">
+            Answer: 
+            <input type="text">
+
+            <input type="button" value="Add Answer" style="margin-left:10px;">
+        </div>
+</div>

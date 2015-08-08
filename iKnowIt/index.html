@@ -9,7 +9,7 @@
 
 </head>
 <body ng-app="app">
-    <div ng-controller="mainController">        
+    <div ng-controller="mainController">
         <div class="container well" style="margin: 20px auto;">
             <div class="row well-sm">
                 <label class="pull-left">
@@ -20,11 +20,18 @@
                 <input class="pull-right btn btn-default" ng-show="newPostMode" type="button" value="Post List" ng-click="viewPostList()" />
             </div>
             <div class="row well-lg" style="background:white;">
-                <content-panel ng-show="!newPostMode"></content-panel>              
+                <content-panel ng-show="!newPostMode"></content-panel>
                 <add-post ng-show="newPostMode"></add-post>
-                </div>                
-                    </div>
-                        </div>
+            </div>
+        </div>
+        <div class="container well" style="margin: 20px auto;">
+            <div class="row well-sm">
+                Post Detail:
+            </div>
+            <div class="row well-lg" style="background:white;">
+                <show-post ng-show="!newPostMode"></show-post>
+            </div>
+    </div>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/angular.min.js"></script>
@@ -35,6 +42,7 @@
     <script src="app.js"></script>
     <script src="Controls/AddPost/addPostDirective.js"></script>  
     <script src="Controls/ContentPanel/contentPanelDirective.js"></script>
+    <script src="Controls/ShowPost/showPostDirective.js"></script>
     <script src="controllers/mainController.js"></script>
    
 </body>

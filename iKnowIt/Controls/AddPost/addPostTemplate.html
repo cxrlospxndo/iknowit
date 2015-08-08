@@ -10,6 +10,23 @@
             <option value="note">Note</option>
         </select>
     </div>
+    <div id="toolbar">
+        <button class="ql-bold">Bold</button>
+        <button class="ql-italic">Italic</button>
+        <button class="ql-list">List</button>
+        <button class="ql-bullet">Bullet</button> 
+    </div>
+
+    <!-- Create the editor container -->
+    <div id="editor">
+        <div>Hello World!</div>
+    </div>
+    <!-- Initialize Quill editor -->
+    <script>
+        var editor = new Quill('#editor');
+        editor.addModule('toolbar', { container: '#toolbar' });
+    </script>
+
     <div>
         <div></div>
         <div class="panel pull-right">
@@ -24,23 +41,7 @@
                 </div>
             </div>
             <!-- Create the toolbar container -->
-            <div id="toolbar">
-                <button class="ql-bold">Bold</button>
-                <button class="ql-italic">Italic</button>
-            </div>
-
-            <!-- Create the editor container -->
-            <div id="editor">
-                <div>Hello World!</div>
-            </div>
-
-          
-
-            <!-- Initialize Quill editor -->
-            <script>
-                var editor = new Quill('#editor');
-                editor.addModule('toolbar', { container: '#toolbar' });
-            </script>
+            
         </div>
        
     </div>

@@ -16,11 +16,12 @@
                     <i class="glyphicon glyphicon-dashboard"></i>
                     <span ng-bind="title"></span>
                 </label>
-                <input class="pull-right btn btn-default" type="button" value="Add New Post" ng-click="showPage('addNewPost')" />
+                <input class="pull-right btn btn-default" ng-show="!newPostMode" type="button" value="Add New Post" ng-click="newPostAction()" />
+                <input class="pull-right btn btn-default" ng-show="newPostMode" type="button" value="Post List" ng-click="viewPostList()" />
             </div>
             <div class="row well-lg" style="background:white;">
-                <content-panel ng-hide="false"></content-panel>              
-                <add-post ng-hide="false"></add-post>
+                <content-panel ng-show="!newPostMode"></content-panel>              
+                <add-post ng-show="newPostMode"></add-post>
                 </div>                
                     </div>
                         </div>

@@ -10,7 +10,7 @@ app.directive('addPost', ['firebaseFactory', function (firebaseFactory) {
          
             scope.addPost = function () {
                 var currentDate = new Date().toDateString();
-                var content = element.find('#ql-editor-1 div')[0].innerHTML;
+                var content = element.find('#ql-editor-1')[0].innerHTML;
                 var newPost = {
                     title: scope.postTitle,
                     type: scope.type,

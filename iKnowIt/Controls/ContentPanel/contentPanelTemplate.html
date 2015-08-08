@@ -7,16 +7,22 @@
         <div style="display: table-cell">Article</div>
         <div style="display: table-cell">Type</div>
         <div style="display: table-cell">Date</div>
+        <div style="display: table-cell"></div>
     </div>
     <div ng-repeat="p in posts" style="display: table-row;">
         <div style="display: table-cell">
             <a ng-bind="p.title"></a>
         </div>
-        <div ng-class="" style="display: table-cell">
-            <span ng-bind="p.type"></span>
+        <div ng-class="" style="display: table-cell" >
+            <span ng-bind="p.type" style="font-weight: bold;" ng-style="{'color': statusColorEnum[p.status]}"></span>
         </div>
         <div style="display: table-cell">
             <span ng-bind="p.date"></span>
+        </div>
+        <div style="display: table-cell">
+            <div ng-repeat="t in p.tags" class="pull-left" style="margin:1px;">
+                <span ng-bind="t" style="background-color: rgba(64, 204, 308, 0.4); border: 1px solid grey; padding: 1px 3px; border-radius: 5px;"></span>
+            </div>            
         </div>
     </div>
 </div>

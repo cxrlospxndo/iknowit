@@ -8,99 +8,36 @@
 
     $scope.title = 'IKnowIT - Knowledge Database';
 
-    $scope.posts = [
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-    ];
+    $scope.posts = firebaseFactory.getData('posts');
+        //{ title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
+        //{ title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
+        //{ title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
+        //{ title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
+        //{ title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
+        //{ title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
+        //{ title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
+        //{ title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
+        //{ title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
+        //{ title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
+  
+        }])
 
-    $scope.newPost = { title: '', type: '', status: -1, content: '', date: '', tags: [] };
-
-    $scope.addPost = function () {
-        firebaseFactory.firebaseSource('posts').push($scope.newPost);
-    }
-
-}])
-
-.factory('firebaseFactory', function () {
+.factory('firebaseFactory', ['$FirebaseObject', function ($FirebaseObject) {
     var firebaseUrl = 'https://blinding-fire-6055.firebaseio.com/';
 
     var firebaseSource = function (table) {
         return (new Firebase(firebaseUrl + table + '/'));
     }
 
-    return {
-        firebaseSource: firebaseSource
-    }
-
-})
-
-.service('firebaseService', ['$firebase', 'firebaseFactory', function ($firebase, firebaseFactory) {
-    return function (table, limit) {
-        var ref = firebaseFactory.firebaseSource(table);
+    var getData = function (table, limit) {
+        var ref = firebaseSource(table);
         limit && (ref = ref.limit(limit));
-        return $firebase(ref);
+        return $FirebaseObject(ref);
     }
+
+    return {
+        firebaseSource: firebaseSource,
+        getData: getData
+    }
+
 }]);

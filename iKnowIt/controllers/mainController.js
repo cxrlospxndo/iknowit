@@ -7,27 +7,21 @@
     }
 
     $scope.title = 'IKnowIT - Knowledge Database';
+
+    $scope.statusColorEnum = {1: "turquoise", 2: "red", 3: "green", 4: "orange"};
+    
     $scope.newPostMode = false;
-    $scope.newPostAction = function(){
-        $scope.newPostMode = true;    
+    $scope.newPostAction = function () {
+        $scope.newPostMode = true;
     }
 
     $scope.viewPostList = function () {
         $scope.newPostMode = false;
     }
     $scope.posts = firebaseFactory.getData('posts');
-        //{ title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        //{ title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        //{ title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        //{ title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        //{ title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        //{ title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        //{ title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },
-        //{ title: 'How to configure GitHub?', type: 'Question', status: 2, content: getMockupContent(), date: new Date(), tags: [] },
-        //{ title: 'is ng-class faster to render views?', type: 'Note', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-        //{ title: 'Introduction to regular expressions', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
-  
-        }])
+
+    $scope.newPost = { title: '', type: '', status: -1, content: '', date: '', tags: [] };
+}])
 
 .factory('firebaseFactory', ['$FirebaseObject', function ($FirebaseObject) {
     var firebaseUrl = 'https://blinding-fire-6055.firebaseio.com/';

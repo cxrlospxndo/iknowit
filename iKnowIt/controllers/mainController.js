@@ -7,7 +7,14 @@
     }
 
     $scope.title = 'IKnowIT - Knowledge Database';
+    $scope.newPostMode = false;
+    $scope.newPostAction = function(){
+        $scope.newPostMode = true;    
+    }
 
+    $scope.viewPostList = function () {
+        $scope.newPostMode = false;
+    }
     $scope.posts = firebaseFactory.getData('posts');
         //{ title: 'How to upload files using JQuery', type: 'Article', status: -1, content: getMockupContent(), date: new Date(), tags: [] },
         //{ title: 'Selenium can\'t find elements', type: 'Question', status: 1, content: getMockupContent(), date: new Date(), tags: [] },

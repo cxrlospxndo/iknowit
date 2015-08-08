@@ -10,13 +10,15 @@
 
     $scope.statusColorEnum = {1: "turquoise", 2: "red", 3: "green", 4: "orange"};
     
-    $scope.posts = [
-        { title: 'How to upload files using JQuery', type: 'Article', status: 1, content: getMockupContent(), date: new Date().toISOString(), tags: ["JQuery", "Article", "Uploading"] },
-        { title: 'Selenium can\'t find elements', type: 'Question', status: 2, content: getMockupContent(), date: new Date().toISOString(), tags: ["Selenium", "Question"] },
-        { title: 'How to configure GitHub?', type: 'Question', status: 3, content: getMockupContent(), date: new Date().toISOString(), tags: ["GitHub", "Config"] }, ,
-        { title: 'is ng-class faster to render views?', type: 'Note', status: 4, content: getMockupContent(), date: new Date().toISOString(), tags: ["NgClass", "Views"] },
-        { title: 'Introduction to regular expressions', type: 'Article', status: 1, content: getMockupContent(), date: new Date().toISOString(), tags: ["Intros"] },
-    ];
+    $scope.newPostMode = false;
+    $scope.newPostAction = function () {
+        $scope.newPostMode = true;
+    }
+
+    $scope.viewPostList = function () {
+        $scope.newPostMode = false;
+    }
+    $scope.posts = firebaseFactory.getData('posts');
 
     $scope.newPost = { title: '', type: '', status: -1, content: '', date: '', tags: [] };
 }])

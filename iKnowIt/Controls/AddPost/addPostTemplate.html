@@ -5,12 +5,12 @@
     <div>
         <div class="col-lg-8">
             <div class="well-sm pull-left">
-                <input class="form-control" id="title" type="text" placeholder="Title" />
+                <input class="form-control" id="title" type="text" placeholder="Title" ng-model="title" />
             </div>                
         </div>
         <div class="col-lg-4">
             <div class="well-sm pull-right">
-                <select class="form-control " name="">
+                <select class="form-control " name="" ng-model="type">
             <option value="question">Question</option>
             <option value="article">Article</option>
             <option value="note">Note</option>
@@ -41,7 +41,7 @@
             </div>
 
           
-
+            <input type="button" ng-click="addPost()" value="Add Post"/>
             <!-- Initialize Quill editor -->
             <script>
                 var editor = new Quill('#editor');

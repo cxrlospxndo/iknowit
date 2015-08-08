@@ -6,7 +6,7 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
 </head>
 <body ng-app="app">
-    <div ng-controller="mainController">
+    <div ng-controller="mainController">        
         <div class="container well" style="margin: 20px auto;">
             <div class="row well-sm">
                 <label class="pull-left">
@@ -16,11 +16,12 @@
                 <input class="pull-right btn btn-default" type="button" value="Add New Post" ng-click="showPage('addNewPost')" />
             </div>
             <div class="row well-lg" style="background:white;">
-                <content-panel ng-hide="true"></content-panel>              
+                <content-panel ng-hide="false"></content-panel>              
                 <add-post ng-hide="false"></add-post>
                 </div>                
                     </div>
                         </div>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

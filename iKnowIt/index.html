@@ -16,21 +16,16 @@
                     <i class="glyphicon glyphicon-dashboard"></i>
                     <span ng-bind="title"></span>
                 </label>
-                <input class="pull-right btn btn-default" ng-show="!newPostMode" type="button" value="Add New Post" ng-click="newPostAction()" />
-                <input class="pull-right btn btn-default" ng-show="newPostMode" type="button" value="Post List" ng-click="viewPostList()" />
+                <input class="pull-right btn btn-default" ng-show="!newPostMode && !inPost" type="button" value="Add New Post" ng-click="newPostAction()" />
+                <input class="pull-right btn btn-default" ng-show="newPostMode && !inPost" type="button" value="Post List" ng-click="viewPostList()" />
+                <input class="pull-right btn btn-default" ng-show="inPost" type="button" value="Post List" ng-click="exitPost()">
             </div>
             <div class="row well-lg" style="background:white;">
-                <content-panel ng-show="!newPostMode"></content-panel>
-                <add-post ng-show="newPostMode"></add-post>
+                <content-panel ng-show="!newPostMode && !inPost"></content-panel>
+                <add-post ng-show="newPostMode && !inPost"></add-post>
+                <show-post ng-show="inPost"></show-post>
             </div>
         </div>
-        <div class="container well" style="margin: 20px auto;">
-            <div class="row well-sm">
-                Post Detail:
-            </div>
-            <div class="row well-lg" style="background:white;">
-                <show-post ng-show="!newPostMode"></show-post>
-            </div>
     </div>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src="js/jquery-2.1.4.min.js"></script>

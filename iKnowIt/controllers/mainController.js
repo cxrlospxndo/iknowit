@@ -21,6 +21,12 @@
     $scope.posts = firebaseFactory.getData('posts');
 
     $scope.newPost = { title: '', type: '', status: -1, content: '', date: '', tags: [] };
+
+    $scope.selectedPost = null;
+
+    $scope.showPost = function (post) {
+        $scope.selectedPost = post;
+    }
 }])
 
 .factory('firebaseFactory', ['$firebaseObject', function ($firebaseObject) {

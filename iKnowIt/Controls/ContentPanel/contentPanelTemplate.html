@@ -11,7 +11,7 @@
     </div>
     <div ng-repeat="p in posts" style="display: table-row;">
         <div style="display: table-cell">
-            <a ng-bind="p.title"></a>
+            <a ng-bind="p.title" ng-click="showPost(p)"></a>
         </div>
         <div ng-class="" style="display: table-cell" >
             <span ng-bind="p.type" style="font-weight: bold;" ng-style="{'color': statusColorEnum[p.status]}"></span>

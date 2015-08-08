@@ -63,6 +63,8 @@
     <Content Include="Controls\AddPost\addPostTemplate.html" />
     <Content Include="Controls\ContentPanel\contentPanelDirective.js" />
     <Content Include="Controls\ContentPanel\contentPanelTemplate.html" />
+    <Content Include="Controls\ShowPost\showPostDirective.js" />
+    <Content Include="Controls\ShowPost\showPostTemplate.html" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />

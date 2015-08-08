@@ -23,7 +23,7 @@
     $scope.newPost = { title: '', type: '', status: -1, content: '', date: '', tags: [] };
 }])
 
-.factory('firebaseFactory', ['$FirebaseObject', function ($FirebaseObject) {
+.factory('firebaseFactory', ['$firebaseObject', function ($firebaseObject) {
     var firebaseUrl = 'https://blinding-fire-6055.firebaseio.com/';
 
     var firebaseSource = function (table) {
@@ -33,7 +33,7 @@
     var getData = function (table, limit) {
         var ref = firebaseSource(table);
         limit && (ref = ref.limit(limit));
-        return $FirebaseObject(ref);
+        return $firebaseObject(ref);
     }
 
     return {

@@ -6798,3 +6798,11 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+.ql-editor{
+    border: 2px solid #337ab7;
+    border-radius: 5px; 
+    padding: 5px;
+    min-height: 125px !important;
+    min-width: 200px !important;
+}

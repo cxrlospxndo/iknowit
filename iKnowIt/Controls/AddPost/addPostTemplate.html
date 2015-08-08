@@ -2,9 +2,9 @@
     <div class="form-group pull-right" style="margin-bottom:2px;">
     </div>
     
-        <div class="col-lg-8">
+        <div class="col-lg-9">
             <div class="well-sm pull-left">
-                <input class="form-control" id="title" type="text" placeholder="Title" ng-model="title" />
+                <input class="form-control" id="title" type="text" placeholder="Title" ng-model="postTitle" />
                 
                 <div id="toolbar" style="margin-top:20px;">
                     <button class="ql-bold">Bold</button>
@@ -15,7 +15,7 @@
                 
                 <!-- Create the editor container -->
                 <div id="editor">
-                    <div>Hello World!</div>
+                    <input type="text" id="content"></input>
                 </div>
                 <!-- Initialize Quill editor -->
                 <script>
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                 </div>
- 
+            <input class="btn btn-dark"  id="" type="button" value="Add Post" ng-click="addPost()" />
              
 
          

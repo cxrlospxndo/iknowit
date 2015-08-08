@@ -19,30 +19,24 @@
     ];
 
     $scope.newPost = { title: '', type: '', status: -1, content: '', date: '', tags: [] };
-
-    $scope.addPost = function () {
-        firebaseFactory.firebaseSource('posts').push($scope.newPost);
-    }
-
 }])
 
-.factory('firebaseFactory', function () {
+.factory('firebaseFactory', ['$FirebaseObject', function ($FirebaseObject) {
     var firebaseUrl = 'https://blinding-fire-6055.firebaseio.com/';
 
     var firebaseSource = function (table) {
         return (new Firebase(firebaseUrl + table + '/'));
     }
 
-    return {
-        firebaseSource: firebaseSource
-    }
-
-})
-
-.service('firebaseService', ['$firebase', 'firebaseFactory', function ($firebase, firebaseFactory) {
-    return function (table, limit) {
-        var ref = firebaseFactory.firebaseSource(table);
+    var getData = function (table, limit) {
+        var ref = firebaseSource(table);
         limit && (ref = ref.limit(limit));
-        return $firebase(ref);
+        return $FirebaseObject(ref);
     }
+
+    return {
+        firebaseSource: firebaseSource,
+        getData: getData
+    }
+
 }]);
